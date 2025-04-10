@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Risk Prediction Results</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container result-container">
+        <h1>Your Stroke Risk Prediction</h1>
+        
+        <div class="result-card">
+            <div class="result-section">
+                <h2>Predicted Stroke Risk</h2>
+                <div class="prediction-container">
+                    <div class="prediction-circle {% if risk_category == 'High Risk' %}high-risk{% else %}low-risk{% endif %}">
+                        <span class="prediction-value">{{ prediction }}%</span>
+                    </div>
+                    <div class="prediction-label">
+                        <span class="risk-category {% if risk_category == 'High Risk' %}high-risk-text{% else %}low-risk-text{% endif %}">
+                            {{ risk_category }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="result-details">
+                <p><strong>Age:</strong> {{ age }}</p>
+                <p>This prediction is based on the symptoms and information you provided.</p>
+            </div>
+            
+            <div class="interpretation">
+                <h3>What Does This Mean?</h3>
+                {% if risk_category == 'High Risk' %}
+                <p>A stroke risk of {{ prediction }}% is considered high. This indicates that based on the model's 
+                   analysis of your health information, you may have an elevated risk for stroke.</p>
+                {% else %}
+                <p>A stroke risk of {{ prediction }}% is considered low to moderate. However, it's always 
+                   important to maintain a healthy lifestyle and regular health check-ups.</p>
+                {% endif %}
+            </div>
+        </div>
+        
+        
+        <div class="button-container">
+            <a href="/" class="btn-back">Make Another Prediction</a>
+        </div>
+    </div>
+</body>
+</html>

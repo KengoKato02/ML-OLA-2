@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #8bb3dd; 
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+h2 {
+    color: #7da7cf; 
+    margin: 15px 0;
+    font-size: 1.4rem;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #b0bec5;
+    font-size: 1rem;
+}
+
+.form-section {
+    margin-bottom: 20px;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #242424;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #b0bec5;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1);
+    accent-color: #7da7cf; 
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-predict {
+    background-color: #5d8cb3; 
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-predict:hover {
+    background-color: #6e9bc1;
+}
+
+.btn-back {
+    display: inline-block;
+    background-color: #546e7a; 
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #607d8b; 
+}
+
+.result-container {
+    text-align: center;
+}
+
+.result-card {
+    background-color: #242424;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #333333;
+}
+
+.result-section {
+    margin-bottom: 20px;
+}
+
+.prediction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.prediction-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.low-risk {
+    background-color: #2e7d32; 
+    box-shadow: 0 4px 10px rgba(46, 125, 50, 0.4);
+}
+
+.high-risk {
+    background-color: #c62828; 
+    box-shadow: 0 4px 10px rgba(198, 40, 40, 0.4);
+}
+
+.prediction-value {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.prediction-label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.low-risk-text {
+    color: #66bb6a;
+}
+
+.high-risk-text {
+    color: #ef5350; 
+}
+
+.result-details {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.interpretation {
+    text-align: left;
+    border-top: 1px solid #333333;
+    padding-top: 15px;
+}
+
+.interpretation h3 {
+    margin-bottom: 12px;
+    color: #8bb3dd; 
+}
+
+.interpretation ul {
+    list-style-position: inside;
+    margin-top: 8px;
+    margin-left: 15px;
+    color: #b0bec5;
+}
+
+.interpretation li {
+    margin-bottom: 6px;
+}

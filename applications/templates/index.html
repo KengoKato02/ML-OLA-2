@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Risk Predictor</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/js/form_handler.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Stroke Risk Prediction Tool</h1>
+        <p class="description">Enter your health information to calculate your stroke risk.</p>
+        
+        <form id="riskForm" onsubmit="submitForm(event)">
+            <div class="form-section">
+                <h2>Basic Information</h2>
+                <div class="form-group">
+                    <label for="Age">Age:</label>
+                    <input type="number" id="Age" name="Age" min="18" max="90" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Symptoms</h2>
+                <div class="checkbox-grid">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Chest Pain" name="Chest Pain">
+                        <label for="Chest Pain">Chest Pain</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Shortness of Breath" name="Shortness of Breath">
+                        <label for="Shortness of Breath">Shortness of Breath</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Irregular Heartbeat" name="Irregular Heartbeat">
+                        <label for="Irregular Heartbeat">Irregular Heartbeat</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Fatigue & Weakness" name="Fatigue & Weakness">
+                        <label for="Fatigue & Weakness">Fatigue & Weakness</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Dizziness" name="Dizziness">
+                        <label for="Dizziness">Dizziness</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Swelling (Edema)" name="Swelling (Edema)">
+                        <label for="Swelling (Edema)">Swelling (Edema)</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Pain in Neck/Jaw/Shoulder/Back" name="Pain in Neck/Jaw/Shoulder/Back">
+                        <label for="Pain in Neck/Jaw/Shoulder/Back">Pain in Neck/Jaw/Shoulder/Back</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Excessive Sweating" name="Excessive Sweating">
+                        <label for="Excessive Sweating">Excessive Sweating</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Persistent Cough" name="Persistent Cough">
+                        <label for="Persistent Cough">Persistent Cough</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Nausea/Vomiting" name="Nausea/Vomiting">
+                        <label for="Nausea/Vomiting">Nausea/Vomiting</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="High Blood Pressure" name="High Blood Pressure">
+                        <label for="High Blood Pressure">High Blood Pressure</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Chest Discomfort (Activity)" name="Chest Discomfort (Activity)">
+                        <label for="Chest Discomfort (Activity)">Chest Discomfort During Activity</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Cold Hands/Feet" name="Cold Hands/Feet">
+                        <label for="Cold Hands/Feet">Cold Hands/Feet</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Snoring/Sleep Apnea" name="Snoring/Sleep Apnea">
+                        <label for="Snoring/Sleep Apnea">Snoring/Sleep Apnea</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="Anxiety/Feeling of Doom" name="Anxiety/Feeling of Doom">
+                        <label for="Anxiety/Feeling of Doom">Anxiety/Feeling of Doom</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-container">
+                <button type="submit" class="btn-predict">Calculate Risk</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
