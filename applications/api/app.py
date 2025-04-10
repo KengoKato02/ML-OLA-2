@@ -8,7 +8,6 @@ from fastapi.exceptions import HTTPException
 import pandas as pd
 import joblib
 import os
-import numpy as np
 
 app = FastAPI()
 
@@ -81,9 +80,6 @@ class StrokeRiskInput(BaseModel):
 
         scaled_input = scaler.transform(raw_df)
         return pd.DataFrame(scaled_input, columns=scaler.feature_names_in_)
-
-
-
 
 @app.post("/predict")
 async def predict_stroke_risk(input_data: StrokeRiskInput):
